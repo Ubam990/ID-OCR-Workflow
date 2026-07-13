@@ -1,0 +1,14 @@
+# Transcript files
+*.jsonl
+
+# Plans
+plans/
+
+# Telemetry JSON
+*.json
+
+# Temp files
+*.zip
+
+# Settings with API keys
+settings.json

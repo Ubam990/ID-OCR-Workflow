@@ -1,0 +1,2 @@
+- [ID Extraction Workflow](id-extraction-workflow.md) — 从身份证和营业执照照片中提取信息并自动创建文本文档的工作流
+- [User Permissions](user-permissions.md) — 工具调用直接执行不询问，但信息不确定时必须向用户确认
