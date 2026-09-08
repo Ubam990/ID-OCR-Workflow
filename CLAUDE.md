@@ -16,7 +16,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
    - 合并提交：`POST` → `/index`（参数 ids, ts, paytype=free, core=all, saveformat=txt, lang=1,2, combine=1 等）
    - 轮询：`POST` → `/get_conv_convert_status`（需同时传 id 和 time）
    - 下载 ZIP 解压读取 `output_高精.txt`
-3. 生成拼音（法人首字母大写，公司/地址全小写无空格）
+3. 生成拼音/英文名（法人姓名拼音首字母大写；公司名称转英文格式如 `Shenzhen Lanpin E-commerce Co., Ltd.`；地址拼音全小写无空格）
 4. 自动生成邮箱和密码
 5. 输出到 `C:\Users\12905\Desktop\<姓名>.txt`
 

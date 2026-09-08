@@ -12,3 +12,16 @@ plans/
 
 # Settings with API keys
 settings.json
+
+# Sensitive personal data (ID cards, business license photos)
+店铺注册/
+
+# Working artifacts (evidence extraction)
+evidence*
+evidence.files/
+
+# One-off scripts with local paths
+convert_doc.ps1
+extract_doc.ps1
+extract_html.ps1
+ocr_batch.sh
