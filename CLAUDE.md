@@ -12,7 +12,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 1. 用户提供身份证正反面 + 营业执照照片（三张）
 2. 通过 https://ocr.wdku.net/ 在线 OCR 识别
-   - 上传：`POST WebClient.UploadFile` → `/upload?convtype=ocr`
+   - 上传：`curl.exe -F` 逐张上传 → `/upload?convtype=ocr`（记录返回的 id 和 time）
    - 合并提交：`POST` → `/index`（参数 ids, ts, paytype=free, core=all, saveformat=txt, lang=1,2, combine=1 等）
    - 轮询：`POST` → `/get_conv_convert_status`（需同时传 id 和 time）
    - 下载 ZIP 解压读取 `output_高精.txt`
@@ -25,8 +25,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **工具直接执行，不询问权限**
 - **OCR 结果不确定时必须暂停向用户确认**（准确性第一）
 - 拼音：拼音转换工具 https://www.qqxiuzi.cn/zh/pinyin/ 常被拦截，可用人工知识替代
-- PowerShell 5.1 环境：无 `-Form` 参数、无 `&&`/`||`、无三元运算符、编码用 UTF-8
-- WebClient 上传文件：`$wc.UploadFile(url, "POST", $filePath)`
+- 上传用 `curl.exe -F`，不能用 PowerShell 的 `Invoke-WebRequest`（缺少 `-Form` 支持）
+- PowerShell 5.1 环境：无 `&&`/`||`、无三元运算符、编码用 UTF-8
 
 ## 记忆文件
 
